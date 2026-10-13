@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Mini Chat · AI와 나누는 대화</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header><a class="brand" href="/" aria-label="Mini Chat 홈"><span class="logo">✦</span> Mini Chat</a><button id="reset" class="reset" type="button">＋ 새 대화</button></header>
+    <main>
+      <div class="conversation-heading"><span class="dot"></span> GPT-4o mini <span class="muted">· 나만의 AI 도우미</span></div>
+      <section id="messages" role="log" aria-label="대화 내용" aria-live="polite" aria-relevant="additions text">
+        <div id="welcome" class="welcome"><div class="hero-icon">✦</div><p class="eyebrow">작은 질문에서, 새로운 아이디어까지</p><h1>오늘은 무엇을 도와드릴까요?</h1><p>궁금한 것을 편하게 물어보세요.<br>앞서 나눈 대화를 기억하며 함께 생각할게요.</p><div class="suggestions"><button type="button">어려운 개념을 쉽게 설명해 줘</button><button type="button">새로운 프로젝트 아이디어를 제안해 줘</button><button type="button">효율적인 공부 계획을 세워 줘</button></div></div>
+      </section>
+      <div class="composer-area"><p id="status" role="status"></p><form id="chat-form"><label for="input" class="sr-only">메시지</label><textarea id="input" rows="1" maxlength="4000" placeholder="메시지를 입력하세요…" required></textarea><button id="send" type="submit" aria-label="메시지 보내기">↑</button></form><div class="composer-meta"><span>Enter로 전송 · Shift + Enter로 줄바꿈</span><span id="counter">0 / 4,000</span></div><p class="footnote">AI의 답변은 정확하지 않을 수 있습니다. 대화는 새로고침하면 사라집니다.</p></div>
+    </main>
+    <footer>가볍게 묻고, 함께 생각하세요.</footer>
+  </div>
+</body>
+</html>
